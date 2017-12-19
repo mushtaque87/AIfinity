@@ -1,0 +1,6 @@
+framework module Pods_AIfinity {
+  umbrella header "Pods-AIfinity-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="MainViewController" customModule="AIfinity" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DJz-fU-daX">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ZnS-9z-Nsv"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Esu-L0-qmb"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DJz-fU-daX" secondAttribute="trailing" id="FZ2-u2-ndg"/>
+                            <constraint firstItem="DJz-fU-daX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="N6Q-7I-Wb4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DJz-fU-daX" secondAttribute="bottom" id="R05-Z6-VjS"/>
+                            <constraint firstItem="DJz-fU-daX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="t4E-RQ-zD4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
+                    <connections>
+                        <outlet property="liveEventTableView" destination="DJz-fU-daX" id="NlW-qG-Ibg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="645" y="18"/>
+        </scene>
+        <!--Right View Controller-->
+        <scene sceneID="TfG-nS-PZD">
+            <objects>
+                <viewController storyboardIdentifier="RightViewController" id="4pd-Xf-j0B" customClass="RightViewController" customModule="AIfinity" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xqB-Px-BSc"/>
+                        <viewControllerLayoutGuide type="bottom" id="JJR-fV-lXV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uQr-ck-adx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Right View Controller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7V5-OK-6tb">
+                                <rect key="frame" x="218" y="100" width="162" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="93" id="XfU-3d-v7m"/>
+                                    <constraint firstAttribute="width" constant="240" id="hgB-EJ-Pyp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fa4-Nz-M79">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="4pd-Xf-j0B" id="ZTY-Eq-LFC"/>
+                                    <outlet property="delegate" destination="4pd-Xf-j0B" id="Ihv-6p-rhg"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fa4-Nz-M79" firstAttribute="top" secondItem="uQr-ck-adx" secondAttribute="top" id="BNO-Z0-U5Z"/>
+                            <constraint firstAttribute="trailing" secondItem="fa4-Nz-M79" secondAttribute="trailing" id="CQj-Vv-uGl"/>
+                            <constraint firstItem="fa4-Nz-M79" firstAttribute="leading" secondItem="uQr-ck-adx" secondAttribute="leading" id="Fld-F1-atr"/>
+                            <constraint firstItem="7V5-OK-6tb" firstAttribute="top" secondItem="xqB-Px-BSc" secondAttribute="bottom" constant="80" id="NzO-MK-D29"/>
+                            <constraint firstItem="fa4-Nz-M79" firstAttribute="bottom" secondItem="JJR-fV-lXV" secondAttribute="top" id="OFL-WK-qon"/>
+                            <constraint firstAttribute="centerX" secondItem="7V5-OK-6tb" secondAttribute="centerX" id="aFz-Ii-I2f"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="d1v-JS-zdI"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
+                    <connections>
+                        <outlet property="tableView" destination="fa4-Nz-M79" id="dbj-1h-Ap8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LWW-RC-9KR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1661" y="18"/>
+        </scene>
+        <!--Left View Controller-->
+        <scene sceneID="Cty-8J-QzF">
+            <objects>
+                <viewController storyboardIdentifier="LeftViewController" id="d1F-4c-Oke" customClass="LeftViewController" customModule="AIfinity" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aSc-GG-rFu"/>
+                        <viewControllerLayoutGuide type="bottom" id="KGM-7R-e2u"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GVB-rE-JQM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cAk-lB-k8m">
+                                <rect key="frame" x="0.0" y="160" width="600" height="507"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="d1F-4c-Oke" id="hHb-Xp-ESo"/>
+                                    <outlet property="delegate" destination="d1F-4c-Oke" id="I3A-ms-X0W"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KGM-7R-e2u" firstAttribute="top" secondItem="cAk-lB-k8m" secondAttribute="bottom" id="3mR-dC-e8u"/>
+                            <constraint firstItem="cAk-lB-k8m" firstAttribute="top" secondItem="aSc-GG-rFu" secondAttribute="bottom" constant="140" id="KRD-bT-tsM"/>
+                            <constraint firstAttribute="trailing" secondItem="cAk-lB-k8m" secondAttribute="trailing" id="m2e-Ce-xTs"/>
+                            <constraint firstItem="cAk-lB-k8m" firstAttribute="leading" secondItem="GVB-rE-JQM" secondAttribute="leading" id="sXZ-0j-8ri"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jaY-7M-eDx"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="667"/>
+                    <connections>
+                        <outlet property="tableView" destination="cAk-lB-k8m" id="Qs4-3V-MHL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QEj-zA-aW6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-395" y="49"/>
+        </scene>
+        <!--First Tab View Controller-->
+        <scene sceneID="kjs-SG-cZe">
+            <objects>
+                <viewController storyboardIdentifier="FirstTab_ViewController" id="esq-W1-O6v" customClass="FirstTab_ViewController" customModule="AIfinity" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YRK-AO-Zki"/>
+                        <viewControllerLayoutGuide type="bottom" id="ecH-Qk-Rjo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sWm-qz-AcP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="R1b-Aa-PZY">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="esq-W1-O6v" id="RyJ-O6-ZfL"/>
+                                    <outlet property="delegate" destination="esq-W1-O6v" id="59a-0F-Cn4"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="R1b-Aa-PZY" firstAttribute="top" secondItem="YRK-AO-Zki" secondAttribute="bottom" id="1zB-ta-1bK"/>
+                            <constraint firstItem="BwA-cK-ux2" firstAttribute="trailing" secondItem="R1b-Aa-PZY" secondAttribute="trailing" id="V9s-pq-Tcg"/>
+                            <constraint firstItem="ecH-Qk-Rjo" firstAttribute="top" secondItem="R1b-Aa-PZY" secondAttribute="bottom" id="W8p-ig-POz"/>
+                            <constraint firstItem="R1b-Aa-PZY" firstAttribute="leading" secondItem="BwA-cK-ux2" secondAttribute="leading" id="zbZ-vn-lbL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BwA-cK-ux2"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="92s-Vh-3pQ"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
+                    <connections>
+                        <outlet property="liveEventTableView" destination="R1b-Aa-PZY" id="8tR-oK-Cuk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="013-qq-0Qn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-395.19999999999999" y="711.544227886057"/>
+        </scene>
+        <!--Second Tab View Controller-->
+        <scene sceneID="unO-sI-OTd">
+            <objects>
+                <viewController storyboardIdentifier="SecondTab_ViewController" id="teS-eo-bLm" customClass="SecondTab_ViewController" customModule="AIfinity" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UKL-XU-b0w"/>
+                        <viewControllerLayoutGuide type="bottom" id="dDj-iS-wjT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KsS-K0-VRL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pnf-j5-JmL" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="193" width="600" height="407"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ClY-DR-FPh">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="bargraphcell" id="iFw-w1-g7q" customClass="AnalyticsTableViewCell" customModule="AIfinity" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iFw-w1-g7q" id="HJx-5K-aVF">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="teS-eo-bLm" id="aI7-dA-fvh"/>
+                                    <outlet property="delegate" destination="teS-eo-bLm" id="PIM-CA-euG"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ClY-DR-FPh" firstAttribute="top" secondItem="KsS-K0-VRL" secondAttribute="top" id="6LU-dS-bac"/>
+                            <constraint firstItem="dDj-iS-wjT" firstAttribute="top" secondItem="Pnf-j5-JmL" secondAttribute="bottom" id="CKK-Cy-bhw"/>
+                            <constraint firstItem="dDj-iS-wjT" firstAttribute="top" secondItem="ClY-DR-FPh" secondAttribute="bottom" id="FmD-Q9-hF5"/>
+                            <constraint firstItem="Pnf-j5-JmL" firstAttribute="leading" secondItem="vS2-xe-Pln" secondAttribute="leading" id="M50-ic-VQu"/>
+                            <constraint firstItem="ClY-DR-FPh" firstAttribute="leading" secondItem="vS2-xe-Pln" secondAttribute="leading" id="RKn-jO-dwM"/>
+                            <constraint firstItem="vS2-xe-Pln" firstAttribute="trailing" secondItem="Pnf-j5-JmL" secondAttribute="trailing" id="UyI-kc-Qr7"/>
+                            <constraint firstItem="Pnf-j5-JmL" firstAttribute="top" secondItem="UKL-XU-b0w" secondAttribute="bottom" constant="173" id="bio-tE-ZZi"/>
+                            <constraint firstItem="ClY-DR-FPh" firstAttribute="trailing" secondItem="vS2-xe-Pln" secondAttribute="trailing" id="wvH-eO-xhL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vS2-xe-Pln"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" id="8Rn-iA-DTR"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
+                    <connections>
+                        <outlet property="AnalyticsTable" destination="ClY-DR-FPh" id="V4E-cF-mOf"/>
+                        <outlet property="barChartView" destination="Pnf-j5-JmL" id="nIu-9G-1dx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RRz-Kr-kuX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="644.79999999999995" y="711.544227886057"/>
+        </scene>
+        <!--Thrid Tab View Controller-->
+        <scene sceneID="6kf-tz-L9o">
+            <objects>
+                <viewController storyboardIdentifier="ThridTab_ViewController" id="yIP-9D-rEt" customClass="ThridTab_ViewController" customModule="AIfinity" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KZK-As-7W9"/>
+                        <viewControllerLayoutGuide type="bottom" id="j82-Xt-z0l"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NlO-NJ-OAw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="u2H-Wd-tRv"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iTg-zD-5j3"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DOn-9n-8ht" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1662" y="712"/>
+        </scene>
+    </scenes>
+</document>
